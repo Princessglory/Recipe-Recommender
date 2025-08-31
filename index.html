@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="floating-particles" id="particles"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🍳 Recipe Recommender</h1>
+            <p class="subtitle">Simple Food Matcher - Find perfect recipes with your ingredients!</p>
+            <div class="sdg-badge">SDG 2: ZERO HUNGER</div>
+        </div>
+
+        <div class="main-content">
+            <div class="input-section">
+                <h2>
+                    🥗 Add Your Ingredients
+                </h2>
+                
+                <div class="ingredient-input">
+                    <input 
+                        type="text" 
+                        id="ingredientInput" 
+                        placeholder="Enter an ingredient (e.g., chicken, tomatoes, rice...)"
+                        onkeypress="handleKeyPress(event)"
+                    >
+                    <button class="add-btn" onclick="addIngredient()">+</button>
+                </div>
+
+                <div class="ingredients-list" id="ingredientsList">
+                    <div style="color: #999; font-style: italic; align-self: center;">
+                        Add ingredients to get started...
+                    </div>
+                </div>
+
+                <button class="get-recipes-btn" id="getRecipesBtn" onclick="getRecipes()" disabled>
+                    🔍 Find Recipes
+                </button>
+
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>Finding delicious recipes for you...</p>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <h2>
+                    📋 Recipe Suggestions
+                </h2>
+                
+                <div id="recipeResults">
+                    <div class="empty-state">
+                        <div class="icon">🍽️</div>
+                        <p>Add some ingredients and click "Find Recipes" to see suggestions!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tech-stack">
+            <h3>💻 Tech Stack</h3>
+            <div class="tech-tags">
+                <span class="tech-tag">Frontend: HTML5/CSS3</span>
+                <span class="tech-tag">JavaScript (Filtering)</span>
+                <span class="tech-tag">Backend: Python (Flask)</span>
+                <span class="tech-tag">Database: MySQL</span>
+                <span class="tech-tag">AI: OpenAI API</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
